@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const MessageSchema = mongoose.Schema({
-    city:{
+    city:{ //City name
         type: String,
         required:true
     },

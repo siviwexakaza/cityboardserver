@@ -4,7 +4,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT || 5000;
 const db = require('./config/db').database;
-const route = require('./routes/api/message');
+const ChatsRoute = require('./routes/api/message');
+const ProvincesRoute = require('./routes/api/province');
+const CitiesRoute = require('./routes/api/city');
 
 const app = express();
 app.use(bodyParser.json());
@@ -20,7 +22,9 @@ app.get('/',(req,res)=>{
     res.send("api running...");
 });
 
-app.use('/api/chats',route);
+app.use('/api/chats',ChatsRoute);
+app.use('/api/provinces',ProvincesRoute);
+app.use('/api/Cities',CitiesRoute);
 
 app.listen(port,()=>{
     console.log("Server started...");
