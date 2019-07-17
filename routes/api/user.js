@@ -26,7 +26,7 @@ router.post('/register',(req,res)=>{
         "username":req.body.username
     }).then((user)=>{
         if(user.length > 0){
-            res.json([{"Error":"Incorrect username/password","Status":"Failed"},,{"Action":"Try again"}]);
+            res.json([{"Error":"Incorrect username/password","Status":"Failed"},,{"Action":"Try again!"}]);
            
 
         }else{
