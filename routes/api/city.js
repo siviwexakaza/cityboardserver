@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const City = require('../../models/City');
+const cors = require('cors');
+
 
 router.get('/',(req,res)=>{
     City.find().then(cities=>{

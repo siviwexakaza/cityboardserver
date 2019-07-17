@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Province = require('../../models/Province');
+const cors = require('cors');
+express().use(cors());
 
 router.get('/',(req,res)=>{
     Province.find().then(provinces=>{
