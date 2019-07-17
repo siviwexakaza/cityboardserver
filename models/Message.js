@@ -11,6 +11,10 @@ const MessageSchema = mongoose.Schema({
     day:{
         type:Date,
         default:Date.now
+    },
+    username:{
+        type:String,
+        required:false
     }
 });
 

@@ -7,6 +7,7 @@ const db = require('./config/db').database;
 const ChatsRoute = require('./routes/api/message');
 const ProvincesRoute = require('./routes/api/province');
 const CitiesRoute = require('./routes/api/city');
+const UsersRoute = require('./routes/api/user');
 
 const app = express();
 app.use(bodyParser.json());
@@ -25,6 +26,7 @@ app.get('/',(req,res)=>{
 app.use('/api/chats',ChatsRoute);
 app.use('/api/provinces',ProvincesRoute);
 app.use('/api/Cities',CitiesRoute);
+app.use('/api/users',UsersRoute);
 
 app.listen(port,()=>{
     console.log("Server started...");

@@ -21,7 +21,8 @@ router.get('/:id',(req,res)=>{
 router.post('/',(req,res)=>{
     nMessage = new Message({
         city: req.body.city,
-        content: req.body.content
+        content: req.body.content,
+        username:req.body.username
     });
 
     nMessage.save().then((m)=>{res.json(m)}).catch(e=>console.log(e));
