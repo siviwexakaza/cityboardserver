@@ -8,6 +8,9 @@ const ChatsRoute = require('./routes/api/message');
 const ProvincesRoute = require('./routes/api/province');
 const CitiesRoute = require('./routes/api/city');
 const UsersRoute = require('./routes/api/user');
+const ConversationRoute = require('./routes/api/conversation');
+const InboxRoute = require('./routes/api/chat');
+const DriverRoute = require('./routes/api/driver');
 
 const app = express();
 app.use(bodyParser.json());
@@ -27,6 +30,9 @@ app.use('/api/chats',ChatsRoute);
 app.use('/api/provinces',ProvincesRoute);
 app.use('/api/Cities',CitiesRoute);
 app.use('/api/users',UsersRoute);
+app.use('/api/conversations',ConversationRoute);
+app.use('/api/inbox',InboxRoute);
+app.use('/api/drivers',DriverRoute);
 
 app.listen(port,()=>{
     console.log("Server started...");
